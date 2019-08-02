@@ -1,0 +1,43 @@
+{
+    "name": "symbiote/silverstripe-elemental-dashboard",
+    "description": "Dashboard module with three column elemental area layout",
+    "type": "silverstripe-vendormodule",
+    "keywords": [
+        "silverstripe",
+        "symbiote"
+    ],
+    "license": "BSD-3-Clause",
+    "authors": [
+        {
+            "name": "Symbiote",
+            "homepage": "https://www.symbiote.com.au/"
+        },
+        {
+            "name": "Khushbu Fuletra",
+            "email": "khushbu@symbiote.com.au"
+        }
+    ],
+    "require": {
+        "silverstripe/framework": "^4.0",
+        "dnadesign/silverstripe-elemental-list": "~1.0"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^5.7"
+    },
+    "autoload": {
+        "psr-4": {
+            "Symbiote\\ElementalDashboard\\": "src/",
+            "Symbiote\\ElementalDashboard\\Tests\\": "tests/"
+        }
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "1.0.x-dev"
+        },
+        "expose": [
+          "client/images"
+        ]
+    },
+    "prefer-stable": true,
+    "minimum-stability": "dev"
+}
