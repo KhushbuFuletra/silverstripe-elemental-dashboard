@@ -27,6 +27,27 @@ class Dashboard extends Page {
         'RightColumn'
     );
 
+    public function onBeforeWrite() {
+        parent::onBeforeWrite();
+
+        if (!$this->ElementalAreaID) {
+            $obj = ElementalArea::create();
+            $obj->write();
+            $this->ElementalAreaID = $obj->ID;
+        }
+        if (!$this->RightColumnID) {
+            $obj = ElementalArea::create();
+            $obj->write();
+            $this->RightColumnID = $obj->ID;
+        }
+        if (!$this->LeftColumnID) {
+            $obj = ElementalArea::create();
+            $obj->write();
+            $this->LeftColumnID = $obj->ID;
+        }
+
+    }
+
     public function getCMSFields() {
         $fields = parent::getCMSFields();
 
